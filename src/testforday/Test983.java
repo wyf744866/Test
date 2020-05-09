@@ -36,4 +36,11 @@ public class Test983 {
         }
         return memo[i];
     }
+
+    public static void main(String[] args) {
+        Test983 t = new Test983();
+        int[] days ={1,2,3,4,5,6,8,20,40};
+        int[] costs = {2,7,14};
+        System.out.println(t.mincostTickets(days,costs));
+    }
 }
