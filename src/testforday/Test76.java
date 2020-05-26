@@ -28,14 +28,15 @@ public class Test76 {
         int right = 0;
         //[left right)
         while (right< sLen){
-            if (tFreq[charsS[right]] == 0){
+            char charRight = charsS[right];
+            if (tFreq[charRight] == 0){
                 right++;
                 continue;
             }
-            if (winFreq[charsS[right]] < tFreq[charsS[right]]){
+            if (winFreq[charRight] < tFreq[charRight]){
                 distance++;
             }
-            winFreq[charsS[right]]++;
+            winFreq[charRight]++;
             right++;
              while (distance == tLen){
                  if (right - left < minLen){
@@ -43,15 +44,16 @@ public class Test76 {
                      begin = left;
                  }
 
-                 if (tFreq[charsS[left]] == 0){
+                 char charLeft = charsS[left];
+                 if (tFreq[charLeft] == 0){
                      left++;
                      continue;
                  }
 
-                 if (winFreq[charsS[left]] == tFreq[charsS[left]]){
+                 if (winFreq[charLeft] == tFreq[charLeft]){
                      distance--;
                  }
-                 winFreq[charsS[left]]--;
+                 winFreq[charLeft]--;
                  left++;
              }
         }
