@@ -23,17 +23,16 @@ public class BucketSort2 {
 			Node p = bucket_table[index];
 			if (p.key == 0) {
 				bucket_table[index].next = node;
-				(bucket_table[index].key)++;
-				
+
 			}else {
-				while (p.next != null && p.next.key <= node.key) 
+				while (p.next != null && p.next.key <= node.key) {
 					p = p.next;
-				
+				}
 					node.next = p.next;
 					p.next = node;
-					(bucket_table[index].key)++;
-				
+
 			}
+			(bucket_table[index].key)++;
 		}
 		for (int i = 0; i < bucketsize; i++) {
 			for (Node k = bucket_table[i].next;k!=null; k = k.next)

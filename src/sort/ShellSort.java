@@ -23,7 +23,7 @@ public class ShellSort {
 
 	public static void main(String[] args) {
 		ShellSort t = new ShellSort();
-		int[] nums = { 1, 2, 4, 2, 4, 5, 3 };
+		int[] nums = { 1, 2, 4, 2, 4, 5, 3 ,7};
 		System.out.println(Arrays.toString(t.shell(nums)));
 	}
 }

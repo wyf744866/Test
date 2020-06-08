@@ -16,7 +16,7 @@ public class QuickSort2 {
 }
 
   public static int partition(int[] array, int start, int end) {
-      int pivot = (int) (start + Math.random() * (end - start + 1));//基准取中间数
+      int pivot = (int) (start + Math.random() * (end - start + 1));//基准取中间数 也可取第一位数
       int smallIndex = start - 1;
       swap(array, pivot, end);
       for (int i = start; i <= end; i++)
